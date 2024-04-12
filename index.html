@@ -16,10 +16,17 @@
     <form id="form">
         <label for="length">pxの長さをチェックする </label>
         <input type="number" id="length" name="length">
-        <input type="submit" value="チェック">
+        <input type="submit" id="button" value="チェック">
     </form>
     <div id="line"></div>
 
+<style>
+  #button{
+    cursor:pointer;
+    background-color: #ffffff;
+    color: #black;
+  }
+    
     <script>
         var form = document.getElementById('form');
         var line = document.getElementById('line');
