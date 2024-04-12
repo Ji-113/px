@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 2px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <label for="length">pxの長さをチェックする </label>
+        <input type="number" id="length" name="length">
+        <input type="submit" value="チェック">
+    </form>
+    <div id="line"></div>
+
+    <script>
+        var form = document.getElementById('form');
+        var line = document.getElementById('line');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var length = document.getElementById('length').value;
+            line.style.width = length + 'px';
+        });
+    </script>
+</body>
+</html>
